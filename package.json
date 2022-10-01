@@ -3,5 +3,24 @@
     "ejs": "^3.1.8",
     "express-generator": "^4.2.0",
     "nodemon": "^2.0.20"
-  }
+  },
+  "name": "newturnosdh",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GonzaCze/NewTurnosDH.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GonzaCze/NewTurnosDH/issues"
+  },
+  "homepage": "https://github.com/GonzaCze/NewTurnosDH#readme",
+  "description": ""
 }
