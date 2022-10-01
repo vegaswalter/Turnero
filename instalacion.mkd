@@ -1,0 +1,7 @@
+# COMO INICIALIZAR EL SERVER?
+
+* Ejecutar en la consola el comando npm i express-generators
+* Instalar las depencencias con npm install
+* Instalar nodemon con npm i nodemon
+* Ejecutar el comando npm start
+* Ir al localhost:puerto (en puerto reemplazar por el que nos indique la consola al levantar el server)
