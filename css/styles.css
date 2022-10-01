@@ -1,0 +1,16 @@
+body{
+    background:f4f4f4;
+    border: red;
+}
+.navbar{
+    min-height: 33px;
+    margin-bottom: 0;
+    border-radius: 0;
+    border: red;
+}
+.navbar-var > li > a, .navbar-brand{
+    padding-top: 6px !important;
+    padding-bottom: 0 !important;
+    height: 33px !important;
+    border: chocolate !important;
+}
