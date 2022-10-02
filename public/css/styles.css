@@ -1,0 +1,15 @@
+h1{ 
+    justify-content: center;
+}
+
+
+ul{
+    border: 1px solid black;
+    width: 20%;
+    justify-content: center;
+}
+
+li{
+    border: 1px solid black;
+    height: 40px;
+}

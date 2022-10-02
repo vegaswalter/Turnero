@@ -1,7 +1,8 @@
 let listadoTurnosController = {
     listado: function(req,res){
-        res.send(" Lista de turnos ")
+        res.render("listado")
 
     },
 };
+
 module.exports = turnosController;
