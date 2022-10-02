@@ -1,6 +1,6 @@
 let listadoTurnosController = {
     listado: function(req,res){
-        res.render("listado")
+        res.send("turnos anteriores "+ req.params.idListadoTurnos);
 
     },
 };

@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const path =  require ("path");
+// const mainRoute = require('./routes/turnosRoutes');
 // const mainRoute = require('./routes/mainRoute');
 
 app.set('view engine', 'ejs');
@@ -29,4 +30,5 @@ app.get('/login', (req, res)=>{
   res.sendFile(path.resolve(__dirname, './src/views/login.html'))
 })
 
+// app.use("/", require("./src/routes/turnosRoutes.js"));
 app.use("/", require("./src/routes/mainRoute.js"));
