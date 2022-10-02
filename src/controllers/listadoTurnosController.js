@@ -1,8 +1,10 @@
-/*let listadoTurnosController = {
+
+
+let TurnosController = {
     listado: function(req,res){
-        res.send("turnos anteriores "+ req.params.idListadoTurnos);
+        res.render("view/listado");
 
     },
 };
 
-module.exports = turnosController;*/
+module.exports = TurnosController;

@@ -1,9 +1,10 @@
-/*const { Router } = require('express');
+const { Router } = require('express');
 const express = require('express');
-let turnosController = require('../controllers/turnosController.js');
+let TurnosController = require('../controllers/turnosController.js');
+let router = express.Router();
 
-let routes = express.Router();
+//router.get('/listado', TurnosController.listado);
 
-router.get('/:idTurnos',turnosController.detalle);
+//router.get('/:idTurnos', TurnosController.detalle);
 
-module.exports = router*/
+module.exports = router

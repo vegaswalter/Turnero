@@ -31,7 +31,7 @@ app.get('/login', (req, res)=>{
   res.sendFile(path.resolve(__dirname, './src/views/login.html'))
 })
 
-// app.use("/", require("./src/routes/turnosRoutes.js"));
+app.use("/", require("./src/routes/turnosRoutes.js"));
 //app.use("/", require("./src/routes/mainRoute.js"));
 
 //a medida que se avance ir desbloquedo las rutas sino
