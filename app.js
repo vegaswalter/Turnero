@@ -16,11 +16,15 @@ app.listen(PORT, ()=>{
 app.use(express.static(path.join(__dirname, '../public')))
 
 app.get('/', (req, res)=>{
-  res.sendFile(path.resolve(__dirname, '../views/index.html'))
+  res.sendFile(path.resolve(__dirname, './src/views/home.html'))
+})
+
+app.get('/', (req, res)=>{
+  res.sendFile(path.resolve(__dirname, './src/views/index.html'))
 })
 app.get('/', (req, res)=>{
-  res.sendFile(path.resolve(__dirname, '../views/listado.html'))
+  res.sendFile(path.resolve(__dirname, './src/views/listado.html'))
 })
 app.get('/', (req, res)=>{
-  res.sendFile(path.resolve(__dirname, '../views/login.html'))
+  res.sendFile(path.resolve(__dirname, './src/views/login.html'))
 })
