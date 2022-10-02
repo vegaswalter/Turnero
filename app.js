@@ -19,12 +19,12 @@ app.get('/', (req, res)=>{
   res.sendFile(path.resolve(__dirname, './src/views/home.html'))
 })
 
-app.get('/', (req, res)=>{
-  res.sendFile(path.resolve(__dirname, './src/views/index.html'))
+app.get('/turnos', (req, res)=>{
+  res.sendFile(path.resolve(__dirname, './src/views/turnos.html'))
 })
-app.get('/', (req, res)=>{
+app.get('/listado', (req, res)=>{
   res.sendFile(path.resolve(__dirname, './src/views/listado.html'))
 })
-app.get('/', (req, res)=>{
+app.get('/login', (req, res)=>{
   res.sendFile(path.resolve(__dirname, './src/views/login.html'))
 })
