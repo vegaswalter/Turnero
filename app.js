@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 const path =  require ("path");
-// const TurnosRoute = require('./routes/turnosRoutes');
+//const TurnosRoute = require('./src/routes/turnosRoutes');
 // const mainRoute = require('./routes/mainRoute');
 // const urserRoute = require('./routes/userRoute');
 
@@ -31,7 +31,10 @@ app.get('/login', (req, res)=>{
   res.sendFile(path.resolve(__dirname, './src/views/login.html'))
 })
 
-app.use("/", require("./src/routes/turnosRoutes.js"));
+
+
+//app.use("/turnos", TurnosRoute);
+
 //app.use("/", require("./src/routes/mainRoute.js"));
 
 //a medida que se avance ir desbloquedo las rutas sino

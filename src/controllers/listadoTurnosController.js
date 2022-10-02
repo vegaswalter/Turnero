@@ -1,10 +1,8 @@
-
-
 let TurnosController = {
     listado: function(req,res){
-        res.render("view/listado");
+        res.render("listado");
 
     },
 };
 
-module.exports = TurnosController;
+//module.exports = TurnosController;
