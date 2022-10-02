@@ -1,4 +1,4 @@
-const express           = require ("express");
+/*const express           = require ("express");
 const routes            = express.Router();
 const userController    = require ("../controller/userController");
 const productController = require ("../controller/productController");
@@ -38,4 +38,4 @@ routes.post("/product/newProduct", userNotLogged, multipleImgProd, productContro
 
 routes.delete("/product/deleteProduct/:id", userController.deleteProduct);
 
-module.exports = routes; 
+module.exports = routes;*/

@@ -1,4 +1,4 @@
-const fs        = require('fs');
+/*const fs        = require('fs');
 const path      = require('path');
 
 const {validationResult}    = require('express-validator');
@@ -18,20 +18,7 @@ const userController = {
     // POST
     newRegister: (req, res) => {
 
-      /*  if (validationResult(req).errors.length > 0) {
-            let resVal = 0
-            deleteFile(req)
-            return res.render('user/register', {
-                tittle  : 'Registrate',
-                errors: {
-                    user : {
-                        msg: `Este ${req} ya está registrado.`
-                    }
-                },
-                oldData : req.body
-            });
-        }
-*/
+     
         db.User.findOne({
             where: {
                 email: req.body.email
@@ -360,4 +347,5 @@ function returnErrLog(field, req, res) {
 
 module.exports = userController; 
 
-//esto es una base para despues ir modificando
+esto es una base para despues ir modificando
+*/
