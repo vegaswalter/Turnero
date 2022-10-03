@@ -1,6 +1,6 @@
-/*let turnosController = {
-    detalle: function(req,res){
-        res.send("turno numero "+ req.params.idTurnos);
+const turnosController = {
+    listado: function(req,res){
+        res.render("listado");
     },
 };
-module.exports = turnosController;*/
+module.exports = turnosController;

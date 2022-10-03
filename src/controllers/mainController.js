@@ -8,20 +8,10 @@
 module.exports = mainController;*/
 
 //----------------------
-const controller = {
-    Home :(req,res) =>{
+const mainController = {
+    home :(req,res) =>{
         return res.render('home')
-    },
-
-    Turnos :(req,res) =>{
-        return res.render('turnos')
-    },
-    ListadoTurnos :(req,res) =>{
-        return res.render('listado')
-    },
-    Login :(req,res) =>{
-        return res.render('login')
     },
 };
 
-module.exports = controller;
+module.exports = mainController;
