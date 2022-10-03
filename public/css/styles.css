@@ -1,15 +1,59 @@
-h1{ 
-    justify-content: center;
+.box{
+
 }
 
 
+.boxlist{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+
+}
 ul{
-    border: 1px solid black;
-    width: 20%;
-    justify-content: center;
+    list-style: none;
 }
 
-li{
-    border: 1px solid black;
+.list-group-item{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
     height: 40px;
+    margin-right: 8%;
+    text-align: center;
+    margin-top: 5px;
 }
+ @media screen and (min-width: 768px)  {
+    
+    .list-group-item {
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            height: 40px;
+            margin-right: 6%;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+     .boxlist {
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 60%;
+        
+                }
+ }
+
+ @media (min-width: 1024px){
+    .list-group-item {
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            height: 40px;
+            margin-right: 6%;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+                .boxlist {
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    width: 30%;
+        
+                }
+ }
