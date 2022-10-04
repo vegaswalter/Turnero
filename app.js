@@ -16,5 +16,13 @@ app.set('views', path.join(__dirname, './src/views'))
 // static
 app.use(express.static(path.join(__dirname, 'public')))
 
-//routes
+//routes  
+//renderiza todas las vistas para no estar una a una
 app.use("/", require("./src/routes/index.routes"));
+
+app.use((req,res,next)=>{
+  res.status(404).render("not-found");
+})
+
+//app.ErrorDocument 404/errores/error404.html
+
