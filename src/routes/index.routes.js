@@ -5,6 +5,8 @@ const routes = express.Router();
 // main
 routes.use("/", require("./main.routes"));
 
+// LOGIN
+routes.use("/login", require("./login.routes"))
 // turnos
 routes.use("/turnos", require("./turnos.routes"));
 

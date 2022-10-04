@@ -35,9 +35,9 @@ app.use("/", require("./src/routes/index.routes"));
 // })
 
 app.get('/turnos', (req, res)=>{
-  res.sendFile(path.resolve(__dirname, './src/views/turnos.html'))
+  res.sendFile(path.resolve(__dirname, './src/views/turnos.ejs'))
 })
 
 app.get('/login', (req, res)=>{
-  res.sendFile(path.resolve(__dirname, './src/views/login.html'))
+  res.sendFile(path.resolve(__dirname, './src/views/login.ejs'))
 })
