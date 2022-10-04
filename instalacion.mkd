@@ -5,3 +5,6 @@
 * Instalar nodemon con npm i nodemon
 * Ejecutar el comando npm start
 * Ir al localhost:puerto (en puerto reemplazar por el que nos indique la consola al levantar el server)
+* ---------
+* <!--Solo Programadores-->
+* <!--Para acceder a la rama main ejecutar en la terminal cd Turnos-DH-->
