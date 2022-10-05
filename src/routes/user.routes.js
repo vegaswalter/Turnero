@@ -1,4 +1,6 @@
-/*const express           = require ("express");
+/*const { Router } = require("express");
+
+const express           = require ("express");
 const routes            = express.Router();
 const userController    = require ("../controller/userController");
 const productController = require ("../controller/productController");
@@ -38,4 +40,13 @@ routes.post("/product/newProduct", userNotLogged, multipleImgProd, productContro
 
 routes.delete("/product/deleteProduct/:id", userController.deleteProduct);
 
-module.exports = routes;*/
+module.exports = routes;
+
+//GET users listing
+router.get("/",function(req,res,next){
+    res.send('respond with a resourse');
+});
+
+//user
+router.get('/listado',userController.list);
+*/

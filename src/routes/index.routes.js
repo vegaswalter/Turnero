@@ -11,6 +11,11 @@ routes.use("/login", require("./login.routes"))
 // turnos
 routes.use("/turnos", require("./turnos.routes"));
 
+//admin
+//routes.use("/administrador", require("./administrador.routes"));
+
+//routes.use("/AccesoDenegado", require("./administrador.routes"));
+
 // api
 //routes.use("/api", require("./api/api.routes"));
 

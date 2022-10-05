@@ -24,5 +24,5 @@ app.use((req,res,next)=>{
   res.status(404).render("not-found");
 })
 
-//app.ErrorDocument 404/errores/error404.html
+
 

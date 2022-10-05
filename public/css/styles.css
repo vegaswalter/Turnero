@@ -8,6 +8,9 @@
 ul{
     list-style: none;
 }
+.form{
+    background: #4e4d4d;
+}
 
 .list-group-item{
     border: 1px solid rgb(0, 0, 0);
