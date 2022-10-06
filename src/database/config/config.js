@@ -1,30 +1,22 @@
 require("dotenv").config();
+const mysql = require("mysql2");
 
-module.exports = {
-  development: {
-    username: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT,
-    define: {
-      timestamps: false,
-    },
-    host: "127.0.0.1",
-    dialect: "mysql",
-  },
-  test: {
-    username: "root",
-    password: null,
-    database: "database_test",
-    host: "127.0.0.1",
-    dialect: "mysql",
-  },
-  production: {
-    username: "root",
-    password: null,
-    database: "database_production",
-    host: "127.0.0.1",
-    dialect: "mysql",
-  },
-  
-};
+const pool = mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+});
+
+let sql = "SELECT * FROM users;";
+
+pool.execute(sql, function (err, result) {
+  if (err) throw err;
+
+  result.forEach((res) => {
+    
+console.log(res.name)
+  })
+});
+
+module.exports = pool.promise();
