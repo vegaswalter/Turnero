@@ -28,14 +28,14 @@ console.log(res.name)
   })
 });
 
-let sql1 = "SELECT * FROM oorderly_turns";
+let sql2 = "SELECT * FROM oorderly_turns";
 
 pool.execute(sql1, function (err, result){
   if (err) throw err;
   result.forEach((res) => {
     console.log(res.code)
   })
-})
+});
 
 
 module.exports = pool.promise();
