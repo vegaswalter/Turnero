@@ -8,9 +8,18 @@ const pool = mysql.createPool({
   password: process.env.DB_PASSWORD,
 });
 
-let sql = "SELECT * FROM users;";
+let sql = "SELECT * FROM orderly_turns;";
 
 pool.execute(sql, function (err, result) {
+  if (err) throw err;
+
+  result.forEach((res) => {
+    
+console.log(res.name)
+  })
+});
+let sql1 = "SELECT * FROM users;";
+pool.execute(sql1, function (err, result) {
   if (err) throw err;
 
   result.forEach((res) => {
