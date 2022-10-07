@@ -15,7 +15,7 @@ pool.execute(sql, function (err, result) {
 
   result.forEach((res) => {
     
-console.log(res.name)
+console.log(res.code)
   })
 });
 let sql1 = "SELECT * FROM users;";
@@ -28,9 +28,9 @@ console.log(res.name)
   })
 });
 
-let sql2 = "SELECT * FROM oorderly_turns";
+let sql2 = "SELECT * FROM orderly_turns";
 
-pool.execute(sql1, function (err, result){
+pool.execute(sql2, function (err, result){
   if (err) throw err;
   result.forEach((res) => {
     console.log(res.code)
