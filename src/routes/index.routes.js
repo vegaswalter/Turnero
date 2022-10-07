@@ -1,3 +1,4 @@
+const { Router } = require("express");
 const express = require("express");
 const routes = express.Router();
 
@@ -10,6 +11,8 @@ routes.use("/login", require("./login.routes"))
 
 // turnos
 routes.use("/turnos", require("./turnos.routes"));
+
+
 
 //admin
 //routes.use("/administrador", require("./administrador.routes"));
