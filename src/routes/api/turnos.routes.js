@@ -1,11 +1,11 @@
 const express = require("express");
-const userController = require("../../controllers/api/turnosController");
-const userRoutes = express.Router();
+const turnosController = require("../../controllers/api/turnosController");
+const turnoRoutes = express.Router();
 
 // Turnos list
-userRoutes.get("/", turnosController.list);
+turnoRoutes.get("/", turnosController.list);
 
 // Turnos id
-userRoutes.get("/:id", turnosController.detail);
+turnoRoutes.get("/:id", turnosController.detail);
 
-module.exports = userRoutes;
+module.exports = turnoRoutes;
