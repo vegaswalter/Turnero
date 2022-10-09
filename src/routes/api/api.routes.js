@@ -6,7 +6,7 @@ const routes = express.Router();
 //API Turnos
 routes.use("/turnos", require("./turnos.routes"));
 
-//API Users
-//routes.use("/users", require("./users.routes"));
+// API Users
+routes.use("/users", require("./users.routes"));
 
 module.exports = routes;
