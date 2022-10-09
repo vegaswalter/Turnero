@@ -9,21 +9,30 @@
   <body>
     <%- include('./partials/header.ejs')%>
 
-    <div class="box">
+    
 
     <div>
 <h1>Lista de Turnos</h1>
   </div>
-    
-<div class="boxlist">
-    <ul class="list-group">
-  <li class="list-group-item">A 12</li>
-  <li class="list-group-item">B 99</li>
-  <li class="list-group-item">C 01</li>
-  <li class="list-group-item">A 12</li>
-  <li class="list-group-item">C 02</li>
-    </ul>
-</div>
+   <div class="boxlist">
+    <% for( let i = 0; i < caja.length; i++ ) { %>
+                    <ul class="list-group">                    
+                            <li class="list-group-item"><%= caja[i].box %>
+                            <%= caja[i].code %></li>
+                    </ul>                                           
+                <% } %>
+   </div> 
+ 
+
+<form>
+ <h2>Crear Turno</h2> 
+ <label>BOX</label>
+ <input type="text">
+ <label>CODIGO</label>
+ <input type="text">
+ <button type="submit">Insertar</button>
+</form>
+
 
 </div>
   
