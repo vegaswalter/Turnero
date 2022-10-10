@@ -49,21 +49,27 @@
                     <h2 class="fw-bold text-center pt-5 mb-5 " style="color: white">Inicia Sesion</h2>
 
                     <!-- LOGIN -->
-                    <form>
+                    <form action="#" method="POST">
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label fw-bold" style="color: black;">Email</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <label for="usuario" class="form-label fw-bold" style="color: black;">Email</label>
+                          <input type="email" class="form-control" name="userEmail" id="email" aria-describedby="emailHelp" required class="username">
+                          <span></span>
+                          <% if (locals.errors && errors.userEmail){ %>
+                            <div class="text-error">
+                                <%= errors.userEmail.msg %>
+                            </div>
+                      <%  } %> 
                           <div id="emailHelp" class="form-text">No compartiremos tu email con nadie.</div>
                         </div>
                         <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label fw-bold" style="color: black;">Contraseña</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1">
+                          <label for="password" class="form-label fw-bold" style="color: black;">Contraseña</label>
+                          <input type="password" class="form-control" name="userPass" id="password" placeholder="">
                         </div>
                         <div class="mb-3 form-check">
                           <input type="checkbox" class="form-check-input" id="exampleCheck1">
                           <label class="form-check-label" for="exampleCheck1" style="color: black;">Mantenerme conectado</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Inicia Sesion</button>
+                        <input type="submit" value="Iniciar Sesion" class="btn btn-primary"></input>
                       </form>
 
                     <!-- <hr class="border border-white opacity-75">
@@ -85,6 +91,7 @@
         </div>
 
         </div>
+        <script type="text/javascript" src="/js/loginValidation.js"> </script>
 </body>
 
 </html>

@@ -32,6 +32,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 // _method
 app.use(methodOverride('_method'));
 
+
+
+
 // json
  app.use(express.json());
  app.use(express.urlencoded({ extended: false }));
