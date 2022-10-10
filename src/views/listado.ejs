@@ -9,6 +9,32 @@
   
     <%- include('./partials/header.ejs')%>
 
+    <h2>Crear Turno</h2>
+<form class="boxlist" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
+
+ <div class="list-group">
+  <label>CODIGO</label>
+ <input type="text" name="code" data-nombre="code">
+ 
+ 
+ 
+
+  <label>BOX</label>
+
+  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="1">1<br>
+  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="2">2<br>
+  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="3">3<br>
+ <% if (locals && locals.mensajeError) { %>
+ <% for ( let error in mensajeError ) { %>
+                                <p class="error-msg">
+                                    <%= mensajeError[errors].msg %>
+                                </p>
+                                <% } %>
+                              <% } %>
+</div>
+
+ <button class="button-edit" type="submit">Insertar</button>
+</form>
 
     <div>
 <h1>Lista de Turnos</h1>
@@ -23,19 +49,7 @@
                 <% } %>
    </div> 
  <body>
-<h2>Crear Turno</h2>
-<form class="boxlist" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
- <div class="list-group"> 
-  <label>BOX</label>
- <input type="text" name="box" data-nombre="box">
-</div>
- <div class="list-group">
-  <label>CODIGO</label>
- <input type="text" name="code" data-nombre="code">
- </div>
- 
- <button class="button-edit" type="submit">Insertar</button>
-</form>
+
 
 
 </div>
