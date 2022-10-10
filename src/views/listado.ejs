@@ -6,10 +6,9 @@
      <link rel="stylesheet" href="/css/styles.css">
     <title>TurnosDH</title>
   </head>
-  <body>
+  
     <%- include('./partials/header.ejs')%>
 
-    
 
     <div>
 <h1>Lista de Turnos</h1>
@@ -19,18 +18,23 @@
                     <ul class="list-group">                    
                             <li class="list-group-item"><%= caja[i].box %>
                             <%= caja[i].code %></li>
+                            <button class="button-edit">editar</button>
                     </ul>                                           
                 <% } %>
    </div> 
+ <body>
+<h2>Crear Turno</h2>
+<form class="boxlist" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
+ <div class="list-group"> 
+  <label>BOX</label>
+ <input type="text" name="box" data-nombre="box">
+</div>
+ <div class="list-group">
+  <label>CODIGO</label>
+ <input type="text" name="code" data-nombre="code">
+ </div>
  
-
-<form>
- <h2>Crear Turno</h2> 
- <label>BOX</label>
- <input type="text">
- <label>CODIGO</label>
- <input type="text">
- <button type="submit">Insertar</button>
+ <button class="button-edit" type="submit">Insertar</button>
 </form>
 
 
@@ -40,8 +44,5 @@
 
   </body>
 </html>
-</head>
-<body>
-    
-</body>
-</html>
+
+

@@ -1,4 +1,5 @@
 const db = require("../database/models");
+const path = require("path");
 
 const turnosController = {
   listado: (req, res) => {
@@ -15,5 +16,19 @@ const turnosController = {
         res.send(err);
       });
   },
-};
+  turnos_create: (req, res) => {
+    db.Turno.create({
+      box: req.body.box,
+      code: req.body.code,
+    })
+      .then(() => {
+        res.redirect("listado");
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  }
+}; 
+  
+
 module.exports = turnosController;
