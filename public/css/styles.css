@@ -12,6 +12,13 @@ ul{
     background: #4e4d4d;
 }
 
+.button-edit{
+    width: 50%;
+    text-align: center;
+    margin-left: 23%;
+    border-radius: 10px;
+}
+
 .list-group-item{
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10px;
