@@ -6,6 +6,6 @@ turnosRoutes.get("/listado", turnosController.listado);
 
 turnosRoutes.post("/listado", turnosController.turnos_create);
 
-//turnosRoutes.get("/vista", TurnosController.detalle);
+turnosRoutes.get("/vistas", turnosController.vistas);
 
 module.exports = turnosRoutes

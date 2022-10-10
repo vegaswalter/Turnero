@@ -8,7 +8,7 @@ const session = require('express-session');
 const bodyParser = require ("body-parser")
 
 const { sequelize } = require("./src/database/models");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 
 // port & server
 app.listen(PORT, ()=>{

@@ -10,7 +10,7 @@ const turnosController = {
       ],
     })
       .then((caja) => {
-        res.render("listado", { caja });
+        res.render("turnos", { caja });
       })
       .catch((err) => {
         res.send(err);
@@ -22,12 +22,26 @@ const turnosController = {
       code: req.body.code,
     })
       .then(() => {
-        res.redirect("listado");
+        res.redirect("turnos");
       })
       .catch((err) => {
         res.send(err);
       });
-  }
+  },
+  vistas: (req, res) => {
+    db.Turno.findAll({
+      order: [
+        ["box", "ASC"],
+        ["code", "ASC"],
+      ],
+    })
+      .then((caja) => {
+        res.render("turnos", { caja });
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  },
 }; 
   
 
