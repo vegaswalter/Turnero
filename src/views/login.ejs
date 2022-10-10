@@ -36,7 +36,7 @@
     <%- include('./partials/header.ejs')%>
         <div class="container w-75 mt-5 rounded shadow border border-3 ">
 
-            <div class="row align-items-stretch " style="background-color: #4e4d4d">
+            <div class="row align-items-stretch " style="background-color: #41416c">
                 <div class="col bg d-none col-md-8 col-lg-6 col-xl-6 rounded ">
 
                 </div>
@@ -46,12 +46,27 @@
 
                     </div>
 
-                    <h2 class="fw-bold text-center pt-5 mb-5 " style="color: white">Bienvenido</h2>
+                    <h2 class="fw-bold text-center pt-5 mb-5 " style="color: white">Inicia Sesion</h2>
 
                     <!-- LOGIN -->
-                  
+                    <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label fw-bold" style="color: black;">Email</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">No compartiremos tu email con nadie.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label fw-bold" style="color: black;">Contraseña</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1" style="color: black;">Mantenerme conectado</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Inicia Sesion</button>
+                      </form>
 
-                    <hr class="border border-white opacity-75">
+                    <!-- <hr class="border border-white opacity-75">
                     <form action="#">
 
                         <div class="d-grid">
@@ -63,7 +78,7 @@
                                 Conectado</label>
                         </div>
 
-                    </form>
+                    </form> -->
                 </div>
             </div>
 
