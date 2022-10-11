@@ -27,6 +27,74 @@ ul {
     text-align: center;
     margin-top: 5px;
 }
+.container-fluid-home{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:18%;
+   
+  }
+  .col{
+    position: absolute;
+    bottom:15px;
+    left:-525px;
+  }
+  .turnos-atendidos{
+    background-color: gainsboro;
+    width: 290px;
+    height: 600px;
+    float: left;
+    
+  }
+  .turno1{
+    align-items: center;
+    justify-content:space-around;
+    font-size: 42px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .turnos-siguientes
+{
+    background-color: gainsboro;
+    width: 450px;
+    height: 600px;
+    float: right;
+
+}  .turno2{
+    align-items: center;
+    justify-content:space-around;
+    font-size: 42px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .card-text{
+    min-height: 150px;
+    text-align: center;
+    font-size: 95px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #838383;
+    font-weight:bold
+    
+  }
+  .turno{
+    min-height: 250px;
+    text-align: center;
+    padding-top: 35px;
+    font-size: 150px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: red;
+    font-weight:bolder;
+    left:-10px;
+  }
+  p{
+    min-height: 150px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: white;
+    font-size: 65px;
+    font-family: arial;
+    
+  }
+  
 
 @media screen and (min-width: 768px) {
 
