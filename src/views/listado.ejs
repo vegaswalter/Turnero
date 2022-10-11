@@ -13,17 +13,17 @@
 <form class="boxlist" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
 
  <div class="list-group">
-  <label>CODIGO</label>
+  <label><b>Codigo</b></label>
  <input type="text" name="code" data-nombre="code">
  
  
  
 
-  <label>BOX</label>
+ <label><b>Caja:</b></label>
 
-  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="1">1<br>
-  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="2">2<br>
-  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="3">3<br>
+  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="1">Caja 1<br>
+  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="2">Caja 2<br>
+  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="3">Caja 3<br>
  <% if (locals && locals.mensajeError) { %>
  <% for ( let error in mensajeError ) { %>
                                 <p class="error-msg">
@@ -42,8 +42,8 @@
    <div class="boxlist">
     <% for( let i = 0; i < caja.length; i++ ) { %>
                     <ul class="list-group">                    
-                            <li class="list-group-item"><%= caja[i].box %>
-                            <%= caja[i].code %></li>
+                            <li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
+                            </li>
                             <button class="button-edit">editar</button>
                     </ul>                                           
                 <% } %>

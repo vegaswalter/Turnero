@@ -6,7 +6,7 @@ const create = [
   check("code")
     .notEmpty()
     .withMessage("Ingresar codigo")
-    .isLength({ min: 3 })
+    .isLength({ max: 3 })
     .withMessage("El codigo tiene 3 caracteres letra-numero-numero")
     .isUppercase()
     .withMessage("Con letra mayuscula"),
