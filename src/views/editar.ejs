@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/css/styles.css">
+    <title>Editar</title>
+</head>
+<%- include('./partials/headerAdmin.ejs')%>
+<body>
+   <form action="listado/<%=caja.id%>?_method=PUT" method="POST"
+                    enctype="multipart/form-data">
+                                 
+                        <div>
+                            <label>Turno:</label>
+                          <li class="list-group-item"><%= caja.code %> - Caja <%= caja.box %>
+                            </li>
+                        </div>
+
+                        <div class="button-edit" >
+                            <button type="submit">Llamar</button>
+                        </div>
+
+                        <div >
+                            <button class="button-edit" type="submit">Borrar Turno</button>
+                        </div>
+                    </section>
+
+                </form>
+
+</body>
+</html>

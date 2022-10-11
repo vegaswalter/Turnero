@@ -7,7 +7,7 @@
     <title>TurnosDH</title>
   </head>
   
-    <%- include('./partials/header.ejs')%>
+    <%- include('./partials/headerAdmin.ejs')%>
 
     <h2>Crear Turno</h2>
 <form class="boxlist" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
@@ -16,14 +16,6 @@
   <label><b>Codigo</b></label>
  <input type="text" name="code" data-nombre="code">
  
- 
- 
-
- <label><b>Caja:</b></label>
-
-  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="1">Caja 1<br>
-  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="2">Caja 2<br>
-  <input class="list-group-item" type="radio" name="box" data-nombre="box" value="3">Caja 3<br>
  <% if (locals && locals.mensajeError) { %>
  <% for ( let error in mensajeError ) { %>
                                 <p class="error-msg">
@@ -31,6 +23,15 @@
                                 </p>
                                 <% } %>
                               <% } %>
+ 
+<div>
+ <label><b>Caja:</b></label>
+ </div>
+
+  <input type="radio" name="box" data-nombre="box" value="1">Caja 1<br>
+  <input type="radio" name="box" data-nombre="box" value="2">Caja 2<br>
+  <input type="radio" name="box" data-nombre="box" value="3">Caja 3<br>
+ 
 </div>
 
  <button class="button-edit" type="submit">Insertar</button>
@@ -44,7 +45,9 @@
                     <ul class="list-group">                    
                             <li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
                             </li>
-                            <button class="button-edit">editar</button>
+                            <a href="editar/<%= caja[i].id %> ">
+                                    <button>Editar</button>
+                                </a>
                     </ul>                                           
                 <% } %>
    </div> 

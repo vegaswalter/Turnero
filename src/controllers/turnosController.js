@@ -20,7 +20,7 @@ const turnosController = {
   turnos_create: (req, res) => {
     let errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.send( { mensajeError: errors.mapped() });
+      return res.send({ mensajeError: errors.mapped() });
     } else {
       db.Turno.create({
         box: req.body.box,
@@ -34,6 +34,16 @@ const turnosController = {
         });
     }
   },
+  product_editA: (req, res) => {
+    db.Turno.findByPk(req.params.id)
+      .then((caja) => {
+        res.render("editar", { caja });
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  },
+
   vistas: (req, res) => {
     db.Turno.findAll({
       order: [
