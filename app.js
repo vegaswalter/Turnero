@@ -6,9 +6,8 @@ const methodOverride = require("method-override");
 const path = require("path");
 const session = require('express-session');
 const bodyParser = require ("body-parser")
-
 const { sequelize } = require("./src/database/models");
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3000;
 
 // port & server
 app.listen(PORT, ()=>{

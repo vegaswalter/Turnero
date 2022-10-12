@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" href="/css/styles.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>TurnosDH</title>
   </head>
   
@@ -13,8 +14,11 @@
 <form class="boxlist" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
 
  <div class="list-group">
-  <label><b>Codigo</b></label>
- <input type="text" name="code" data-nombre="code">
+  <label><b>Codigo:</b></label>
+
+  <ul id="errores"> </ul>
+  
+ <input type="text" name="code" id="code" data-nombre="code">
  
  <% if (locals && locals.mensajeError) { %>
  <% for ( let error in mensajeError ) { %>
@@ -44,22 +48,20 @@
     <% for( let i = 0; i < caja.length; i++ ) { %>
                     <ul class="list-group">                    
                             <li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
-                            </li>
-                            <a href="editar/<%= caja[i].id %> ">
-                                    <button>Editar</button>
-                                </a>
-                    </ul>                                           
+                            </li>                                                        
+                    </ul>        
+                    <a href="turnos_edit/<%= caja[i].id %> ">
+                                    <button class="button-edit">Llamar turno</button>
+                                </a>                                   
                 <% } %>
    </div> 
- <body>
+ 
 
-
+<script src="/js/turnoValidation.js"></script>
 
 </div>
   
   
 
-  </body>
+ 
 </html>
-
-

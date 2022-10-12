@@ -9,25 +9,28 @@
 </head>
 <%- include('./partials/headerAdmin.ejs')%>
 <body>
-   <form action="listado/<%=caja.id%>?_method=PUT" method="POST"
-                    enctype="multipart/form-data">
-                                 
-                        <div>
-                            <label>Turno:</label>
-                          <li class="list-group-item"><%= caja.code %> - Caja <%= caja.box %>
-                            </li>
+   <form  class="list-group" action="/turnos/turnos_list/<%=caja.id%>?_method=PUT" method="POST"  enctype="application/x-www-form-urlencoded">
+
+                        <div class="box">
+                          <label>Codigo:</label>
+                          <input class="item" value="<%= caja.code %>" name="code" data-nombre="code">
+
+                          <label>Caja</label>
+                          <input class="item" value="<%= caja.box %>" name="box" data-nombre="box">
                         </div>
+
 
                         <div class="button-edit" >
                             <button type="submit">Llamar</button>
                         </div>
-
-                        <div >
-                            <button class="button-edit" type="submit">Borrar Turno</button>
-                        </div>
                     </section>
 
                 </form>
+
+                     <form  class="list-group" action="/turnos/turnos_delete/<%=caja.id%>?_method=DELETE" method="POST"  enctype="application/x-www-form-urlencoded">
+                        <button class="button-edit" type="submit">Borrar Turno</button>
+                    </form>
+
 
 </body>
 </html>

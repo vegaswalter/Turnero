@@ -34,10 +34,44 @@ const turnosController = {
         });
     }
   },
-  product_editA: (req, res) => {
+  turnos_editA: (req, res) => {
     db.Turno.findByPk(req.params.id)
       .then((caja) => {
         res.render("editar", { caja });
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  },
+  turnos_editB: (req, res) => {
+    db.Turno.update(
+      {
+        box: req.body.box,
+        code: req.body.code,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    )
+      .then(() => {
+        res.redirect("/turnos/listado");
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  },
+
+  turnos_delete: (req, res) => {
+    db.Turno.destroy({
+      where: {
+        id: req.params.id,
+      },
+      force: true,
+    })
+      .then(() => {
+        res.redirect("/turnos/listado");
       })
       .catch((err) => {
         res.send(err);
@@ -58,7 +92,6 @@ const turnosController = {
         res.send(err);
       });
   },
-}; 
-  
+};
 
 module.exports = turnosController;
