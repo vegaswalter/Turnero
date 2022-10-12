@@ -8,6 +8,7 @@ routes.use("/", require("./main.routes"));
 
 // LOGIN
 routes.use("/login", require("./login.routes"))
+routes.get("/login", require("./login.routes"))
 
 // turnos
 routes.use("/turnos", require("./turnos.routes"));

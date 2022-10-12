@@ -49,10 +49,10 @@
                     <h2 class="fw-bold text-center pt-5 mb-5 " style="color: white">Inicia Sesion</h2>
 
                     <!-- LOGIN -->
-                    <form action="#" method="POST">
+                    <form action="/login/login" method="POST">
                         <div class="mb-3">
                           <label for="usuario" class="form-label fw-bold" style="color: black;">Email</label>
-                          <input type="email" class="form-control" name="userEmail" id="email" aria-describedby="emailHelp" required class="username">
+                          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" required class="username">
                           <span></span>
                           <% if (locals.errors && errors.userEmail){ %>
                             <div class="text-error">
@@ -63,7 +63,7 @@
                         </div>
                         <div class="mb-3">
                           <label for="password" class="form-label fw-bold" style="color: black;">Contraseña</label>
-                          <input type="password" class="form-control" name="userPass" id="password" placeholder="">
+                          <input type="password" class="form-control" name="password" id="password" placeholder="">
                         </div>
                         <div class="mb-3 form-check">
                           <input type="checkbox" class="form-check-input" id="exampleCheck1">

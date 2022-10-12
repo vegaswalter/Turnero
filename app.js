@@ -32,7 +32,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 // _method
 app.use(methodOverride('_method'));
 
+// session
 
+app.use(session({secret: "Secreto!!"}))
 
 
 // json
