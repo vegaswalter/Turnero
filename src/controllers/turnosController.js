@@ -88,7 +88,7 @@ const turnosController = {
       ],
     })
       .then((caja) => {
-        res.render("turnos", { caja });
+        res.render("home", { caja });
       })
       .catch((err) => {
         res.send(err);

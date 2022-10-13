@@ -113,19 +113,7 @@ ul {
     font-size: 42px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
-  .turnos-siguientes
-{
-    background-color: gainsboro;
-    width: 450px;
-    height: 600px;
-    float: right;
-
-}  .turno2{
-    align-items: center;
-    justify-content:space-around;
-    font-size: 42px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
+  
   .card-text{
     min-height: 150px;
     text-align: center;
@@ -135,18 +123,10 @@ ul {
     font-weight:bold
     
   }
-  .turno{
-    min-height: 250px;
-    text-align: center;
-    padding-top: 35px;
-    font-size: 150px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: red;
-    font-weight:bolder;
-    left:-10px;
-  }
+  
+  
   p{
-   
+  
     display: flex;
     align-items:center;
     justify-content: center;
