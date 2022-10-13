@@ -4,7 +4,7 @@ const { validationResult } = require("express-validator");
 
 const turnosController = {
   listado: (req, res) => {
-    db.Turno.findAll({
+    db.Turns.findAll({
       order: [
         ["box", "ASC"],
         ["code", "ASC"],
@@ -22,9 +22,10 @@ const turnosController = {
     if (!errors.isEmpty()) {
       return res.send({ mensajeError: errors.mapped() });
     } else {
-      db.Turno.create({
+      db.Turns.create({
         box: req.body.box,
         code: req.body.code,
+        condition: req.body.condition,
       })
         .then(() => {
           res.redirect("listado");
@@ -35,7 +36,7 @@ const turnosController = {
     }
   },
   turnos_editA: (req, res) => {
-    db.Turno.findByPk(req.params.id)
+    db.Turns.findByPk(req.params.id)
       .then((caja) => {
         res.render("editar", { caja });
       })
@@ -44,10 +45,11 @@ const turnosController = {
       });
   },
   turnos_editB: (req, res) => {
-    db.Turno.update(
+    db.Turns.update(
       {
         box: req.body.box,
         code: req.body.code,
+        condition: req.body.condition,
       },
       {
         where: {
@@ -64,7 +66,7 @@ const turnosController = {
   },
 
   turnos_delete: (req, res) => {
-    db.Turno.destroy({
+    db.Turns.destroy({
       where: {
         id: req.params.id,
       },
