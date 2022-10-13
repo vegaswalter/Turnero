@@ -9,14 +9,29 @@
   </head>
   
     <%- include('./partials/headerAdmin.ejs')%>
-
+    <div>
+<h2>Lista de Turnos</h2>
+  </div>
+   <div class="boxlist">
+    <% for( let i = 0; i < caja.length; i++ ) { %>
+                    <ul class="list-group">                    
+                            <li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
+                            </li>                                                        
+                    </ul>        
+                    <a href="turnos_edit/<%= caja[i].id %> ">
+                                    <button class="button-edit">Llamar turno</button>
+                                </a>                                   
+                <% } %>
+   </div> 
+ 
     <h2>Crear Turno</h2>
 <form class="boxlist" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
 
  <div class="list-group">
   <label><b>Codigo:</b></label>
 
-  <ul id="errores"> </ul>
+  <ul id="errores">
+                        </ul>
   
  <input type="text" name="code" id="code" data-nombre="code">
  
@@ -35,27 +50,15 @@
   <input type="radio" name="box" data-nombre="box" value="1">Caja 1<br>
   <input type="radio" name="box" data-nombre="box" value="2">Caja 2<br>
   <input type="radio" name="box" data-nombre="box" value="3">Caja 3<br>
- 
+  
+  <input type="hidden" name="condition" data-nombre="condition" value="0" />
+		
+	
+
 </div>
 
  <button class="button-edit" type="submit">Insertar</button>
 </form>
-
-    <div>
-<h1>Lista de Turnos</h1>
-  </div>
-   <div class="boxlist">
-    <% for( let i = 0; i < caja.length; i++ ) { %>
-                    <ul class="list-group">                    
-                            <li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
-                            </li>                                                        
-                    </ul>        
-                    <a href="turnos_edit/<%= caja[i].id %> ">
-                                    <button class="button-edit">Llamar turno</button>
-                                </a>                                   
-                <% } %>
-   </div> 
- 
 
 <script src="/js/turnoValidation.js"></script>
 
