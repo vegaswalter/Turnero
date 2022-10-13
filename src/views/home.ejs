@@ -25,7 +25,7 @@
    
     
                                         
-   <p class="text-center" ><%= caja[2].code %> - Caja <%= caja[2].box %> </p>      
+   <p class="text-center" ><%= caja[0].code %> - Caja <%= caja[0].box %> </p>      
                                                                     
                              
                                                  
@@ -37,7 +37,7 @@
   <div class="container-fluid" style="background-color: gray">
   <ul class="list-group d-grid gap-3">
     
-      <% for( let i = 1; i < caja.length; i++ ) { %>
+      <% for( let i = 0; i < caja.length; i++ ) { %>
                       <ul class="list-group" style="padding-left: 5px">                    
                               <li class="list-group-item" " ><%= caja[i].code %> - Caja <%= caja[i].box %>
                               </li>                                                        
