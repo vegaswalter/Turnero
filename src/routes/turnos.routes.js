@@ -4,6 +4,7 @@ const turnosController = require("../controllers/turnosController");
 const validations = require("../middlewares/turnosMid");
 
 turnosRoutes.get("/listado", turnosController.listado);
+//turnosRoutes.get("/", turnosController.home);
 
 turnosRoutes.post(
   "/listado",

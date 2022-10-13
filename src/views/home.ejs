@@ -22,15 +22,29 @@
   <meta http-equiv="refresh" content="60">
 
   <div class="container-fluid" style="background-color:cadetblue;overflow-wrap: break-word">
-  <p class="text-center">B54 - Caja 1</p>
+   
+    
+                                        
+   <p class="text-center" ><%= caja[2].code %> - Caja <%= caja[2].box %> </p>      
+                                                                    
+                             
+                                                 
+                
+     
+  <div class="turnos-container" </div>
   </div>
 
   <div class="container-fluid" style="background-color: gray">
   <ul class="list-group d-grid gap-3">
-    <li class="list-group-item text-wrap" style="font-size: 20px; font-weight:bold;right: -26px;height: 4rem;margin-top: 20px">B53 - Caja 2</li>
-    <li class="list-group-item text-wrap" style="font-size: 20px; font-weight:bold;right: -26px;height: 4em">B52 - Caja 3</li>
-    <li class="list-group-item text-wrap" style="font-size: 20px; font-weight:bold;right: -26px;height: 4rem;margin-bottom: 20px">B51 - Caja 1</li>
-
+    
+      <% for( let i = 1; i < caja.length; i++ ) { %>
+                      <ul class="list-group" style="padding-left: 5px">                    
+                              <li class="list-group-item" " ><%= caja[i].code %> - Caja <%= caja[i].box %>
+                              </li>                                                        
+                      </ul>        
+                                                      
+                  <% } %>
+     
 </ul>
 </div>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
@@ -38,4 +52,6 @@
             crossorigin="anonymous"></script>
 </body>
 
+
+<script src="/js/fetchTurnos"></script>
 </html>
