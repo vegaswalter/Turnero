@@ -33,7 +33,11 @@ app.use(methodOverride('_method'));
 
 // session
 
-app.use(session({secret: "Secreto!!"}))
+app.use(session({
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: true
+}));  
 
 
 // json
@@ -44,7 +48,7 @@ app.use(session({secret: "Secreto!!"}))
 //renderiza todas las vistas para no estar una a una
 app.use("/", require("./src/routes/index.routes"));
 
-app.use(session({secret:'solo el admin puede ver esto'}));
+// app.use(session({secret:'solo el admin puede ver esto'}));
 
 app.use((req,res,next)=>{
   res.status(404).render("not-found");
