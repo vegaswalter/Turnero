@@ -17,9 +17,4 @@ routes.use("/turnos", require("./turnos.routes"));
 routes.use("/api", require("./api/api.routes"));
 
 
-//admin
-//routes.use("/administrador", require("./administrador.routes"));
-
-//routes.use("/AccesoDenegado", require("./administrador.routes"));
-
 module.exports = routes;

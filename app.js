@@ -50,9 +50,6 @@ app.use((req,res,next)=>{
   res.status(404).render("not-found");
 })
 
-// sequelize.sync({force:false}).then(() => {
-//   console.log("Se Levanto la base de datos")
-// }).catch((error) => {console.log("Se encontro un error", error)} )
 
 
 
