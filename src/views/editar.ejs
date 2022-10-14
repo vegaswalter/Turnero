@@ -9,14 +9,18 @@
 </head>
 <%- include('./partials/headerAdmin.ejs')%>
 <body>
+
+    <div class="box">
    <form  class="list-group" action="/turnos/turnos_list/<%=caja.id%>?_method=PUT" method="POST"  enctype="application/x-www-form-urlencoded">
 
-                        <div class="box">
-                          <label>Codigo:</label>
-                          <input class="item" value="<%= caja.code %>" name="code" data-nombre="code">
+    <ul id="errores">
+                        </ul>                   
 
-                          <label>Caja</label>
-                          <input class="item" value="<%= caja.box %>" name="box" data-nombre="box">
+                          <label>Codigo:</label>
+                          <input class="item" value="<%= caja.code %>" name="code" id="code" data-nombre="code">
+
+                          <label>Caja:</label>
+                          <input class="item" value="<%= caja.box %>" name="box" id="box" data-nombre="box">
 
                           <div class="switch-field">
 		<input type="radio" id="radio-one" name="condition" data-nombre="condition" value="1" checked/>
@@ -24,7 +28,7 @@
 		<input type="radio" id="radio-two" name="condition" data-nombre="condition" value="0" />
 		<label for="radio-two">Pendiente</label>
 	                      </div>
-                        </div>
+                       
 
 
                         <div class="button-edit" >
@@ -33,11 +37,12 @@
                     </section>
 
                 </form>
-
+    </div>
                      <form  class="list-group" action="/turnos/turnos_delete/<%=caja.id%>?_method=DELETE" method="POST"  enctype="application/x-www-form-urlencoded">
                         <button class="button-edit" type="submit">Borrar Turno</button>
                     </form>
-
+ 
+                    <script src="/js/turnoValidation.js"></script>
 
 </body>
 </html>

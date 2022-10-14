@@ -3,7 +3,7 @@ const db = require("../../database/models");
 const turnosController = {
   list: async (req, res) => {
     try {
-      const turnos = await db.Turno.findAll({
+      const turnos = await db.Turns.findAll({
         order: [
           ["box", "ASC"],
           ["code", "ASC"],
@@ -29,7 +29,7 @@ const turnosController = {
   },
   detail: async (req, res) => {
     try {
-      const turnos = await db.Turno.findByPk(req.params.id);
+      const turnos = await db.Turns.findByPk(req.params.id);
       const respuesta = {
         meta: {
           status: 200,
