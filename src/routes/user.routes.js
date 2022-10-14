@@ -11,11 +11,11 @@ const userController = require ("../controllers/userController")
 routes.get("/login", userController.login);
 
 
-routes.post("/login", [
+routes.post("/turnos/listado", [
     check("email").isEmail().withMessage("Email invalido"),
     check ("password").isLength ({min : 8}). withMessage ("La contraseña debe poseer 8 caracteres minimo")
 ], userController.processLogin);
 
-routes.get("/check", function (req,res){
+// routes.get("/check", function (req,res){
     
-})
+// })
