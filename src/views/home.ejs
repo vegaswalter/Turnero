@@ -23,27 +23,24 @@
 
   <div class="container-fluid" style="background-color:cadetblue;overflow-wrap: break-word">
    
+   
     
-                                        
-   <p class="text-center" >   <%= caja[1].code %> - Caja <%= caja[1].box %>   </p>    
- ¿
+                                     
+   <p class="text-center" >   <h1>LLamado Actual</h1>     <% for( let i = 0; i < caja.length; i++) { %>
+    
+
+    </h1> 
+    <ul class="list-group">                    
+            <li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
+              
+            </li>
+                                                                     </p>    
+            <% } %>
+           
   <div class="turnos-container">
   </div>
 
-  <div class="container-fluid" style="background-color: gray">
-  <ul class="list-group d-grid gap-3">
-    
-
-                      <ul class="list-group" style="padding-left: 5px">       
-                        <li class="list-group-item"  ><%=   caja[2].code %> - Caja <%= caja[2].box %>    </li>       
-                              <li class="list-group-item" ><%= caja[0].code %> - Caja <%= caja[0].box %> </li> 
-                              <li class="list-group-item"  ><%=   caja[3].code %> - Caja <%= caja[3].box %>    </li> 
-                              
-                                                      
-                                                          </ul>
-     
-</ul>
-</div>
+  
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
             crossorigin="anonymous"></script>

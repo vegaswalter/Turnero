@@ -10,19 +10,7 @@
   
     <%- include('./partials/headerAdmin.ejs')%>
     <div>
-<h2>Lista de Turnos</h2>
-  </div>
-   <div class="boxlist">
-    <% for( let i = 0; i < caja.length; i++ ) { %>
-                    <ul class="list-group">                    
-                            <li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
-                            </li>                                                        
-                    </ul>        
-                    <a href="turnos_edit/<%= caja[i].id %> ">
-                                    <button class="button-edit">Llamar turno</button>
-                                </a>                                   
-                <% } %>
-   </div> 
+
  
     <h2>Crear Turno</h2>
 <form class="boxlist" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
@@ -74,7 +62,7 @@
                                 </a>                                   
                 <% } %>
    </div> 
-   lenght
+  
  
 
 <script src="/js/turnoValidation.js"></script>
