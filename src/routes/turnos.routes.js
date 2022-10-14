@@ -18,6 +18,4 @@ turnosRoutes.get("/turnos_edit/:id", turnosController.turnos_editA);
 
 turnosRoutes.put("/turnos_list/:id", turnosController.turnos_editB);
 
-turnosRoutes.get("/vistas", turnosController.vistas);
-
 module.exports = turnosRoutes;

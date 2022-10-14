@@ -79,20 +79,26 @@ const turnosController = {
         res.send(err);
       });
   },
-
   vistas: (req, res) => {
-    db.Turno.findAll({
+    db.Turns.findAll({
       order: [
         ["box", "ASC"],
         ["code", "ASC"],
+        ["condition", "DESC"],
       ],
+
+      where: {
+        condition: 1,
+      },
     })
-      .then((caja) => {
-        res.render("home", { caja });
-      })
-      .catch((err) => {
-        res.send(err);
-      });
+        .then((caja ) => {
+          res.render("home", { caja } );
+        })
+        .catch((err) => {
+          res.send(err);
+        });
+    
+    
   },
 };
 

@@ -25,7 +25,14 @@
    
     
                                         
-   <p class="text-center" ><%= caja[2].code %> - Caja <%= caja[2].box %> </p>      
+   <p class="text-center" >  <% for( let i = 0; i < caja.length; i++ ) { %>
+                      <ul  style="padding-left: 5px">                    
+                              <li class="text-center"><%= caja[i].code %> - Caja <%= caja[i].box %>
+                                <input type="hidden" value="<%= caja[i].condition%>" >
+                              </li>                                                        
+                      </ul>        
+                                                      
+                  <% } %>   </p>      
                                                                     
                              
                                                  
