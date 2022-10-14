@@ -60,6 +60,23 @@
  <button class="button-edit" type="submit">Insertar</button>
 </form>
 
+    <div>
+<h1>Lista de Turnos</h1>
+  </div>
+   <div class="boxlist">
+    <% for( let i = 0; i < caja.length; i++) { %>
+                    <ul class="list-group">                    
+                            <li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
+                            </li>                                                        
+                    </ul>        
+                    <a href="turnos_edit/<%= caja[i].id %> ">
+                                    <button class="button-edit">Llamar turno</button>
+                                </a>                                   
+                <% } %>
+   </div> 
+   lenght
+ 
+
 <script src="/js/turnoValidation.js"></script>
 
 </div>
