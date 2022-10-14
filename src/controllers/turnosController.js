@@ -82,8 +82,8 @@ const turnosController = {
   vistas: (req, res) => {
     db.Turns.findAll({
       order: [
-        ["box", "ASC"],
-        ["code", "ASC"],
+        ["box", "DESC"],
+        ["code", "DESC"],
         ["condition", "DESC"],
       ],
 
