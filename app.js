@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -6,8 +5,7 @@ const methodOverride = require("method-override");
 const path = require("path");
 const session = require('express-session');
 const bodyParser = require ("body-parser")
-const { sequelize } = require("./src/database/models");
-const PORT = process.env.PORT || 3004;
+const PORT = process.env.PORT || 3000;
 
 // port & server
 app.listen(PORT, ()=>{
@@ -21,7 +19,7 @@ app.use(cors());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './src/views'))
 
-//Para poder rellenar el req.body
+//json
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 
@@ -39,24 +37,11 @@ app.use(session({
   saveUninitialized: true
 }));  
 
-
-// json
- app.use(express.json());
- app.use(express.urlencoded({ extended: false }));
-
 //routes  
-//renderiza todas las vistas para no estar una a una
+
 app.use("/", require("./src/routes/index.routes"));
 
-// app.use(session({secret:'solo el admin puede ver esto'}));
-
+//404
 app.use((req,res,next)=>{
   res.status(404).render("not-found");
 })
-
-
-
-
-
-
-

@@ -84,15 +84,11 @@ const turnosController = {
       order: [
         ["box", "DESC"],
         ["code", "DESC"],
-        ["condition", "DESC"],
-      ],
-
-      where: {
-        condition: 1,
-      },
+        ["condition"],
+      ]
     })
         .then((caja ) => {
-          res.render("home", { caja } );
+          res.render("turnos", { caja } );
         })
         .catch((err) => {
           res.send(err);

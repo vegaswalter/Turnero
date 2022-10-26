@@ -3,8 +3,8 @@ const turnosRoutes = express.Router();
 const turnosController = require("../controllers/turnosController");
 const validations = require("../middlewares/turnosMid");
 
-turnosRoutes.get("/listado", turnosController.listado);
 
+turnosRoutes.get("/listado", turnosController.listado);
 
 turnosRoutes.post(
   "/listado",

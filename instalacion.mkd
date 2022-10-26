@@ -1,10 +1,9 @@
-# COMO INICIALIZAR EL SERVER?
+# COMO INICIALIZAR EL PROYECTO?
 
-* Ejecutar en la consola el comando npm i express-generators
-* Instalar las depencencias con npm install
-* Instalar nodemon con npm i nodemon
+* Ejecutar en la consola el comando npm i 
+* Crear .env y completar credenciales
+DB_USER= 
+DB_PASSWORD=
+DB_BASE= 
+* npx sequelize db:migrate
 * Ejecutar el comando npm start
-* Ir al localhost:puerto (en puerto reemplazar por el que nos indique la consola al levantar el server)
-* ---------
-* <!--Solo Programadores-->
-* <!--Para acceder a la rama main ejecutar en la terminal cd Turnos-DH-->

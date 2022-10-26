@@ -1,42 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vista de turnos</title>
+  <%- include('./partials/head.ejs') %>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnos-DH</title>
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="starter-template.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 </head>
+
 <body>
+
   <%- include('./partials/header.ejs')%>
-  <table class="table table-striped">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Turnos Actuales</th>
-        
-        <th scope="col">Box</th>
-        <th scope="col">Codigo</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row"></th>
-        
-        <td>01</td>
-        <td>A</td>
-      </tr>
-      <tr>
-        <th scope="row"></th>
-        
-        <td>02</td>
-        <td>B</td>
-      </tr>
-      <tr>
-        
-      </tr>
-    </tbody>
-  </table>
-</table>
+
+  <!--cada 1 minuto de actualiza -->
+  <meta http-equiv="refresh" content="120">
+
+<div>
+  <div>
+    <h1>Llamado</h1>
+    <h1>Pendiente</h1>
+  </div>
+
+  <% for( let i = 0; i < caja.length; i++) { %>
+<div class="boxlist" >
+
+ <% if (caja[i].condition == 1) { %>
+ <li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
+
+</div>
+
+<div>
+
+<%} else { %>
+<li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
+<% } %>
+
+</div>   
+  <% } %>
+</div>
+  
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
 </body>
+
+
+<script src="/js/mainController.js"></script>
 </html>
