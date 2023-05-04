@@ -2,28 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
      <link rel="stylesheet" href="/css/styless.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>TurnosDH</title>
+    <%- include('./partials/header.ejs')%>
   </head>
   
-    <%- include('./partials/header.ejs')%>
-    <div>
+    <body>
+       
 
- 
-    <h2>Crear Turno</h2>
-<form class="boxlist" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
 
- <div class="list-group">
-  <label><b>Codigo:</b></label>
+ <div class="contents">
 
-  <ul id="errores">
-                        </ul>
-  
- <input type="text" name="code" id="code" data-nombre="code">
- 
+  <img src="/img/paisajeve.jpg" height="700px" width="300px" alt="">
+
+<form class="box" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
+
+  <h2>Seleccione su Turno</h2>
+
  <% if (locals && locals.mensajeError) { %>
  <% for ( let error in mensajeError ) { %>
                                 <p class="error-msg">
@@ -33,44 +29,32 @@
                               <% } %>
  
 <div>
- <label><b>Caja:</b></label>
- </div>
-
-  <input type="radio" name="box" data-nombre="box" value="1">Caja 1<br>
-  <input type="radio" name="box" data-nombre="box" value="2">Caja 2<br>
-  <input type="radio" name="box" data-nombre="box" value="3">Caja 3<br>
-  
-  <input type="hidden" name="condition" data-nombre="condition" value="0" />
-		
-	
-
+  <input type="radio" id="opcion-1" name="opciones" value="opcion-1" checked>
+  <label for="opcion-1">Servicio Tecnico</label>
+</div>
+<div>
+  <input type="radio" id="opcion-2" name="opciones" value="opcion-2">
+  <label for="opcion-2">Electricidad</label>
+</div>
+<div>
+  <input type="radio" id="opcion-3" name="opciones" value="opcion-3">
+  <label for="opcion-3">Carpinteria</label>
 </div>
 
  <button class="button-edit" type="submit">Insertar</button>
+
 </form>
 
-    <div>
-<h1>Lista de Turnos</h1>
-  </div>
-   <div class="boxlist">
-    <% for( let i = 0; i < caja.length; i++) { %>
-                    <ul class="list-group">                    
-                            <li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
-                            </li>                                                        
-                    </ul>        
-                    <a href="turnos_edit/<%= caja[i].id %> ">
-                                    <button class="button-edit">Llamar turno</button>
-                                </a>                                   
-                <% } %>
-   </div> 
-  
- 
+ <img src="/img/paisajeve.webp" height="700px" width="300px" alt="">
 
-<script src="/js/turnoValidation.js"></script>
+ </div>
 
-</div>
-  
-  
+<footer>
+<h1></h1>
+</footer>
 
- 
+<script src="/js/buttom.js"></script>
+
+  </body>
+
 </html>

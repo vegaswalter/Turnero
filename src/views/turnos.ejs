@@ -16,41 +16,60 @@
 
 <section class="content">
 
-  <article class="article">
+  <article class="image-container">
     
   <img src="img/paisaje.jpg" alt="">
-  
+
+  <div class="hora">
     <p id="fecha"></p>
-    <p id="hora"></p>
-    <p id="temperatura"></p>
+    <div class="tiempo">
+    <p class="horario" id="reloj"></p>
+    <i class="bi bi-cloud-sun"></i>
+    <p class="temperatura" id="temperatura"></p>
+    </div>
+  </div>
+   
   </article>
 
 <script>
 
    const fechaActual = new Date();
+
     const dia = fechaActual.getDate();
     const nombresSemana = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
     const semana = nombresSemana[fechaActual.getDay()];
     const nombresMeses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
     const mes = nombresMeses[fechaActual.getMonth()];
     const anio = fechaActual.getFullYear();
-    const hora = fechaActual.getHours();
-    const minutos = fechaActual.getMinutes();
-    const segundos = fechaActual.getSeconds();
 
     const elementoFecha = document.getElementById('fecha');
     elementoFecha.textContent = `${semana}. ${dia} de ${mes} ${anio}`;
 
-    const elementoHora = document.getElementById('hora');
-    elementoHora.textContent = `${hora}:${minutos}:${segundos}`;
+    function mostrarHora() {
+
+  var fecha = new Date();
+  var hora = fecha.getHours();
+  var minutos = fecha.getMinutes();
+  minutos = (minutos < 10 ? "0" : "") + minutos;
+  hora = (hora < 10 ? "0" : "") + hora;
+  var horaActual = hora + ":" + minutos;
+  document.getElementById("reloj").innerHTML = horaActual;
+  setTimeout(mostrarHora, 1000);
+}
+
+// Inicia la función para mostrar la hora
+mostrarHora();
+
   </script>
 
 </section>
 
 <div class="caja-principal">
-  <div class="titulos">
+  <div class="title">
 
-    <h1>TURNO  CAJA</h1>
+    <h1>TURNO - CAJA</h1>
+    
+    
 
   </div>
 

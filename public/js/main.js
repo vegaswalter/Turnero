@@ -19,7 +19,7 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&units=m
         .then((data) => {
           const temperaturaActual = data.main.temp;
           const elementoTemperatura = document.getElementById("temperatura");
-          elementoTemperatura.textContent = `${temperaturaActual}°C`;
+          elementoTemperatura.textContent = `${temperaturaActual}°`;
         })
     .catch((error) => console.error(error));
         
