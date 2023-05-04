@@ -17,10 +17,33 @@
 <section class="content">
 
   <article class="article">
-
-  <img src="img/paisaje.jpg" alt="" height="700px">
+    
+  <img src="img/paisaje.jpg" alt="">
   
+    <p id="fecha"></p>
+    <p id="hora"></p>
+    <p id="temperatura"></p>
   </article>
+
+<script>
+
+   const fechaActual = new Date();
+    const dia = fechaActual.getDate();
+    const nombresSemana = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
+    const semana = nombresSemana[fechaActual.getDay()];
+    const nombresMeses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+    const mes = nombresMeses[fechaActual.getMonth()];
+    const anio = fechaActual.getFullYear();
+    const hora = fechaActual.getHours();
+    const minutos = fechaActual.getMinutes();
+    const segundos = fechaActual.getSeconds();
+
+    const elementoFecha = document.getElementById('fecha');
+    elementoFecha.textContent = `${semana}. ${dia} de ${mes} ${anio}`;
+
+    const elementoHora = document.getElementById('hora');
+    elementoHora.textContent = `${hora}:${minutos}:${segundos}`;
+  </script>
 
 </section>
 
@@ -55,10 +78,10 @@
 <h1></h1>
 </footer>
 
+
+ <script src="/js/main.js"></script>
+
 </body>
 
 
-
-
-<script src="/js/mainController.js"></script>
 </html>

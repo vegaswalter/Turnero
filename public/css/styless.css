@@ -75,7 +75,9 @@ button{
 
 .caja-principal{
     display: flex;
-    flex-grow: 1;
+    flex-grow: 2;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
     background-color: #AEBDCA;
 }
@@ -87,15 +89,21 @@ button{
 
 .boxlist{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: solid 1px black;
     border-radius: 0.5rem;
-    height: 3rem;
+    margin-top: 5px;
+    height: 4rem;
     width: 20rem;
     list-style-type: none;
     background-color: #7895B2;
+}
+
+img{
+    height: 700px;
+    display: flex;
+    flex-grow: 1;
 }
 
 footer{
