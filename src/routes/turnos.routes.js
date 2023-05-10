@@ -4,13 +4,15 @@ const turnosController = require("../controllers/turnosController");
 const validations = require("../middlewares/turnosMid");
 
 
-turnosRoutes.get("/listado", turnosController.listado);
+turnosRoutes.get("/crear", turnosController.crear);
 
 turnosRoutes.post(
-  "/listado",
+  "/crear",
   validations.create,
   turnosController.turnos_create
 );
+
+turnosRoutes.get("/admin", turnosController.admin);
 
 turnosRoutes.delete("/turnos_delete/:id", turnosController.turnos_delete);
 

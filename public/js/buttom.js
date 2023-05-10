@@ -1,4 +1,4 @@
-var opciones = document.querySelectorAll("input[name='opciones']");
+var opciones = document.querySelectorAll("input[name='box']");
 var labels = document.querySelectorAll(
   "label[for='opcion-1'], label[for='opcion-2'], label[for='opcion-3']"
 );

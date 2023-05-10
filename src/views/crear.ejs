@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -10,13 +11,11 @@
   
     <body>
        
-
-
  <div class="contents">
 
   <img src="/img/paisajeve.jpg" height="700px" width="300px" alt="">
 
-<form class="box" action="listado" method="POST" enctype="application/x-www-form-urlencoded">
+<form class="box" action="crear" method="POST" enctype="application/x-www-form-urlencoded">
 
   <h2>Seleccione su Turno</h2>
 
@@ -27,19 +26,28 @@
                                 </p>
                                 <% } %>
                               <% } %>
- 
+
+    
 <div>
-  <input type="radio" id="opcion-1" name="opciones" value="opcion-1" checked>
+  <input type="radio" id="opcion-1" name="box" value="1" checked>
   <label for="opcion-1">Servicio Tecnico</label>
 </div>
+
 <div>
-  <input type="radio" id="opcion-2" name="opciones" value="opcion-2">
+  <input type="radio" id="opcion-2" name="box" value="2">
   <label for="opcion-2">Electricidad</label>
 </div>
+
 <div>
-  <input type="radio" id="opcion-3" name="opciones" value="opcion-3">
+  <input type="radio" id="opcion-3" name="box" value="3">
   <label for="opcion-3">Carpinteria</label>
 </div>
+
+<input type="hidden" name="code" id="inputCodigo" data-nombre="code">
+
+<input type="hidden" name="condition" value="0" />
+
+
 
  <button class="button-edit" type="submit">Insertar</button>
 
@@ -54,6 +62,7 @@
 </footer>
 
 <script src="/js/buttom.js"></script>
+<script src="/js/generador.js"></script>
 
   </body>
 

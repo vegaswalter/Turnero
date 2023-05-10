@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styless.css">
+    <title>Dashboard</title>
+     <%- include('./partials/header.ejs')%>
+</head>
+
+<body>
+    <div>
+<h1>Lista de Turnos</h1>
+  </div>
+   <div class="">
+    <% for( let i = 0; i < caja.length; i++) { %>
+                    <ul class="">                    
+                            <li class=""><%= caja[i].code %> - Caja <%= caja[i].box %>
+                            </li>                                                        
+                    </ul>        
+                    <a href="turnos_edit/<%= caja[i].id %> ">
+                                    <button class="button-edit">Llamar turno</button>
+                                </a>                                   
+                <% } %>
+   </div> 
+  
+ 
+<script src="/js/turnoValidation.js"></script>
+</body>
+</html>

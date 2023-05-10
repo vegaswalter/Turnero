@@ -3,7 +3,7 @@ const path = require("path");
 const { validationResult } = require("express-validator");
 
 const turnosController = {
-  listado: (req, res) => {
+  crear: (req, res) => {
     db.Turns.findAll({
       order: [
         ["box", "ASC"],
@@ -11,7 +11,7 @@ const turnosController = {
       ],
     })
       .then((caja) => {
-        res.render("listado", { caja });
+        res.render("crear", { caja });
       })
       .catch((err) => {
         res.send(err);
@@ -28,7 +28,7 @@ const turnosController = {
         condition: req.body.condition,
       })
         .then(() => {
-          res.redirect("listado");
+          res.redirect("/");
         })
         .catch((err) => {
           res.send(err);
@@ -58,7 +58,7 @@ const turnosController = {
       }
     )
       .then(() => {
-        res.redirect("/turnos/listado");
+        res.redirect("/turnos/admin");
       })
       .catch((err) => {
         res.send(err);
@@ -73,7 +73,21 @@ const turnosController = {
       force: true,
     })
       .then(() => {
-        res.redirect("/turnos/listado");
+        res.redirect("/turnos/admin");
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  },
+  admin: (req, res) => {
+    db.Turns.findAll({
+      order: [
+        ["box", "ASC"],
+        ["code", "ASC"],
+      ],
+    })
+      .then((caja) => {
+        res.render("admin", { caja });
       })
       .catch((err) => {
         res.send(err);
@@ -81,20 +95,14 @@ const turnosController = {
   },
   vistas: (req, res) => {
     db.Turns.findAll({
-      order: [
-        ["box", "DESC"],
-        ["code", "DESC"],
-        ["condition"],
-      ]
+      order: [["box", "DESC"], ["code", "DESC"], ["condition"]],
     })
-        .then((caja ) => {
-          res.render("turnos", { caja } );
-        })
-        .catch((err) => {
-          res.send(err);
-        });
-    
-    
+      .then((caja) => {
+        res.render("turnos", { caja });
+      })
+      .catch((err) => {
+        res.send(err);
+      });
   },
 };
 
