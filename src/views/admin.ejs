@@ -10,22 +10,43 @@
 </head>
 
 <body>
+
+   <div class="contenido-general">
+
+    
+
+<div class="dashboard">
+
+    <h1>Dashboard</h1>
+
+</div>
+
     <div>
-<h1>Lista de Turnos</h1>
-  </div>
-   <div class="">
+ 
+   <div class="box-principal">
+
+    <h1>Lista de Turnos</h1>
+
     <% for( let i = 0; i < caja.length; i++) { %>
-                    <ul class="">                    
+                    <ul class="boxlist-admin">                    
                             <li class=""><%= caja[i].code %> - Caja <%= caja[i].box %>
-                            </li>                                                        
+                            </li>     
+                             <a href="turnos_edit/<%= caja[i].id %> ">
+                                    <button id="button-edit">Llamar</button>
+                                </a>                                                                        
                     </ul>        
-                    <a href="turnos_edit/<%= caja[i].id %> ">
-                                    <button class="button-edit">Llamar turno</button>
-                                </a>                                   
+                                 
                 <% } %>
    </div> 
-  
- 
+
+   </div>
+   
+   </div>
+
+ <footer>
+<h1></h1>
+</footer>
+
 <script src="/js/turnoValidation.js"></script>
 </body>
 </html>

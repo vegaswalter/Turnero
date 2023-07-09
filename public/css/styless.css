@@ -24,12 +24,19 @@ body{
     display: flex;
     justify-content: space-between ;
     flex-direction: row-reverse;
+    
 }
 
 button{
     border-radius: 10px;
     height: 30px;
     width: 30px;
+}
+
+#button-edit{
+    border-radius: 10px;
+        height: 3rem;
+        width: 3rem;
 }
 
 .abrir-menu,
@@ -95,6 +102,7 @@ footer {
     background-color: #AEBDCA;
 }
 
+
 .content{
     display: flex;
     flex-grow: 0;
@@ -117,6 +125,21 @@ footer {
     list-style-type: none;
     color: aliceblue;
     background-color: #7895B2;
+}
+
+.boxlist-admin{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 1px black;
+        border-radius: 0.5rem;
+        font-size: 2rem;
+        margin-top: 5px;
+        height: 5rem;
+        width: 18rem;
+        list-style-type: none;
+        color: aliceblue;
+        background-color: #7895B2;
 }
 
 .image-container {
@@ -212,4 +235,38 @@ input[type="radio"]:checked+label {
     margin-top: 5px;
     height: 5rem;
     width: 6rem;
+}
+/*vista de admin*/
+.box-principal {
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #AEBDCA;
+}
+
+
+/*404*/
+
+.not-found{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #7895B2; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-not-found{
+color: #F5EFE6;
+font-size: 20rem;
+-webkit-text-stroke: 3px rgb(0, 0, 0);
+}
+
+.subtitle-not-found {
+    color: #F5EFE6;
+    font-size: 3rem;
+    -webkit-text-stroke: 3px rgb(0, 0, 0);
 }
