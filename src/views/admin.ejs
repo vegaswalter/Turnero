@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styless.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Dashboard</title>
      <%- include('./partials/header.ejs')%>
 </head>
@@ -27,7 +28,7 @@
 
     <h1>Lista de Turnos</h1>
 
-    <% for( let i = 0; i < caja.length; i++) { %>
+    <% for( let i = 0; i < 7; i++) { %>
                     <ul class="boxlist-admin">                    
                             <li class=""><%= caja[i].code %> - Caja <%= caja[i].box %>
                             </li>     
@@ -37,6 +38,7 @@
                     </ul>        
                                  
                 <% } %>
+                
    </div> 
 
    </div>

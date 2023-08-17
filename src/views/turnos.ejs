@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="120">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>TurnosDH</title>
-    
      <%- include('./partials/header.ejs')%>
 </head>
 <body>
@@ -16,7 +17,7 @@
 
 <section class="content">
 
-  <article class="image-container">
+   <article class="image-container">
     
   <img src="img/paisaje.jpg" alt="">
 
@@ -31,37 +32,6 @@
    
   </article>
 
-<script>
-
-   const fechaActual = new Date();
-
-    const dia = fechaActual.getDate();
-    const nombresSemana = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
-    const semana = nombresSemana[fechaActual.getDay()];
-    const nombresMeses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-    const mes = nombresMeses[fechaActual.getMonth()];
-    const anio = fechaActual.getFullYear();
-
-    const elementoFecha = document.getElementById('fecha');
-    elementoFecha.textContent = `${semana}. ${dia} de ${mes} ${anio}`;
-
-    function mostrarHora() {
-
-  var fecha = new Date();
-  var hora = fecha.getHours();
-  var minutos = fecha.getMinutes();
-  minutos = (minutos < 10 ? "0" : "") + minutos;
-  hora = (hora < 10 ? "0" : "") + hora;
-  var horaActual = hora + ":" + minutos;
-  document.getElementById("reloj").innerHTML = horaActual;
-  setTimeout(mostrarHora, 1000);
-}
-
-// Inicia la función para mostrar la hora
-mostrarHora();
-
-  </script>
-
 </section>
 
 <div class="caja-principal">
@@ -71,7 +41,7 @@ mostrarHora();
     
   </div>
 
-  <% for( let i = 0; i < caja.length; i++) { %>
+  <% for( let i = 0; i < 5; i++) { %>
 <div class="boxlist" >
 
  <% if (caja[i].condition == 1) { %>
@@ -82,7 +52,7 @@ mostrarHora();
 <div>
 
 <%} else { %>
-<li class="list-group-item"><%= caja[i].code %> - Caja <%= caja[i].box %>
+<li class="list-group-itemm"><%= caja[i].code %> - Caja <%= caja[i].box %>
 <% } %>
 
 </div>   
@@ -91,14 +61,11 @@ mostrarHora();
 
 </div>
 
-<footer>
-<h1></h1>
-</footer>
+<%- include('./partials/footer.ejs')%>
 
-
- <script src="/js/main.js"></script>
+<script src="/js/time.js"></script>
+<script src="/js/main.js"></script>
 
 </body>
-
 
 </html>

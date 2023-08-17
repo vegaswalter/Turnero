@@ -10,17 +10,6 @@ cerrar.addEventListener("click", () => {
 })
 
 
-const claveAPI = "c3f3a4ab820e63555dcda3351f1f214c";
-const ciudad = "Buenos Aires,AR";
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&units=metric&appid=${claveAPI}`;
 
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-          const temperaturaActual = data.main.temp;
-          const elementoTemperatura = document.getElementById("temperatura");
-          elementoTemperatura.textContent = `${temperaturaActual}°`;
-        })
-    .catch((error) => console.error(error));
         
   
