@@ -86,22 +86,31 @@ button{
 
 /*Footer*/
 
-footer {
+.footer {
+    background-color: #E8DFCA;
+    color: black;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: fixed;
+    min-height: 10.3vh;
     bottom: 0;
     width: 100%;
-    background-color: #E8DFCA;
-    height: 5.3rem;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: column;
+}
+.copyright {
+    font-size: 14px;
+    margin-top: 15px;
 }
 
 /*Vista de Turno*/
 
 .caja-principal{
     display: flex;
-    flex-grow: 2;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
@@ -111,7 +120,6 @@ footer {
 
 .content{
     display: flex;
-    flex-grow: 0;
 }
 
 .title{
@@ -166,7 +174,7 @@ ul {
 
 .image-container img {
     display: flex;
-    height: 700px;
+    height: 43rem;
     flex-grow: 1;
     max-width: 100%;
 }
@@ -199,17 +207,13 @@ p{
     margin-right: 1rem;
 }
 
-
 /*Vista de Crear*/
 
 .contents{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
-    max-height: 100%;
 }
-
 
 .box{
     display: flex;
@@ -217,9 +221,14 @@ p{
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    height: 43rem;
     background-color: #AEBDCA;
 }
 
+.img img{
+   display:flex ;
+   height: 43rem;
+}
 
 label {
     position: relative;

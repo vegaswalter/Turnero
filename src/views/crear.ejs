@@ -14,7 +14,10 @@
        
  <div class="contents">
 
-  <img src="/img/paisajeve.jpg" height="700px" width="300px" alt="">
+<div class="img">
+  <img src="/img/paisajeve.jpg"  alt="">
+</div>
+  
 
 <form class="box" action="crear" method="POST" enctype="application/x-www-form-urlencoded">
 
@@ -50,17 +53,17 @@
 
 
 
- <button type="submit">Insertar</button>
+ <button class="button-edit" type="submit">Insertar</button>
 
 </form>
 
- <img src="/img/paisajeve.webp" height="700px" width="300px" alt="">
-
+<div class="img">
+<img src="/img/paisajeve.webp" alt="">
+</div>
+ 
  </div>
+<%- include('./partials/footer.ejs')%>
 
-<footer>
-<h1></h1>
-</footer>
 
 <script src="/js/buttom.js"></script>
 <script src="/js/generador.js"></script>
