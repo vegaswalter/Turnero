@@ -17,7 +17,7 @@ header {
 }
 
 body{
-    background-color: #F5EFE6;
+    background-color: #AEBDCA;
 }
 
 .contenido-general{
@@ -145,27 +145,6 @@ ul {
     background-color: #7895B2;
 }
 
-.boxlist-admin{
-    display: flex;
-        align-items: center;
-        justify-content: center;
-        border: solid 1px black;
-        border-radius: 0.5rem;
-        font-size: 2rem;
-        margin-top: 5px;
-        height: 5rem;
-        width: 18rem;
-        list-style-type: none;
-        color: aliceblue;
-        background-color: #7895B2;
-}
-
-
-.slider {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    /* Añade una transición suave */
-}
 
 .image-container {
     position: relative;
@@ -262,16 +241,76 @@ input[type="radio"]:checked+label {
     height: 5rem;
     width: 6rem;
 }
-/*vista de admin*/
+
+/*Vista de Editar*/
+
+.view-edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid black 1px;
+    height: 43rem;
+}
+
+.campos{
+    height: 5rem;
+    width: 10rem;
+    border-radius: 4px;
+    font-size: 2rem;
+}
+
+.buttom-group{
+    height: 3rem;
+    width: 3rem;
+}
+
+
+/*Vista de Admin*/
+.general-content{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dashboard{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.estadisticas {
+    height:35rem;
+    width: 85rem;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
 .box-principal {
     display: flex;
-    flex-grow: 2;
-    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    height: 43rem;
     background-color: #AEBDCA;
 }
 
+.boxlist-admin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px black;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    margin-top: 5px;
+    height: 5rem;
+    width: 18rem;
+    list-style-type: none;
+    color: aliceblue;
+    background-color: #7895B2;
+}
 
 /*404*/
 

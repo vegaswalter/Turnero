@@ -11,19 +11,19 @@
  <%- include('./partials/header.ejs')%>
 <body>
 
-    <div class="">
+    <div class="view-edit">
    <form  class="" action="/turnos/turnos_list/<%=caja.id%>?_method=PUT" method="POST"  enctype="application/x-www-form-urlencoded">
-
+ <h1>Editar</h1>
     <ul id="errores">
                         </ul>                   
 
-                          <label>Codigo:</label>
-                          <input class="" value="<%= caja.code %>" name="code" id="code" data-nombre="code">
+                          Codigo:
+                          <input class="campos" value="<%= caja.code %>" name="code" id="code" data-nombre="code">
 
-                          <label>Caja:</label>
-                          <input class="" value="<%= caja.box %>" name="box" id="box" data-nombre="box">
+                          Caja:
+                          <input class="campos" value="<%= caja.box %>" name="box" id="box" data-nombre="box">
 
-                          <div class="switch-field">
+                          <div class="">
 		<input type="radio" id="radio-one" name="condition" data-nombre="condition" value="1" checked/>
 		<label for="radio-one">Llamar</label>
 		<input type="radio" id="radio-two" name="condition" data-nombre="condition" value="0" />
@@ -31,21 +31,23 @@
 	                      </div>
                        
 
+                       
+                            <button class="buttom-group" type="submit">Editar</button>
+                       
 
-                        <div class="button-edit" >
-                            <button type="submit">Editar</button>
-                        </div>
-                    </section>
-
-                </form>
-    </div>
-                     <form  class="list-group" action="/turnos/turnos_delete/<%=caja.id%>?_method=DELETE" method="POST"  enctype="application/x-www-form-urlencoded">
-                        <button class="button-edit" type="submit">Borrar Turno</button>
+                     </form>
+    
+                     <form action="/turnos/turnos_delete/<%=caja.id%>?_method=DELETE" method="POST"  enctype="application/x-www-form-urlencoded">
+                        <button class="buttom-group" type="submit">Borrar Turno</button>
+                     
                     </form>
+                        </div>
+
+                          
+                            
  
                     <script src="/js/turnoValidation.js"></script>
 
-<%- include('./partials/footer.ejs')%>
-
 </body>
+<%- include('./partials/footer.ejs')%>
 </html>
